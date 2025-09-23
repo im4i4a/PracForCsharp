@@ -24,8 +24,30 @@ namespace PracForCsharp
             Console.WriteLine("My name is {0}",name);
             Console.WriteLine("i am "+age+" years old!");
             Console.WriteLine(haveAPet);
-            Console.WriteLine("My foot size is "+footSize);
+            Console.WriteLine("My foot size is " + footSize);
+            
+            Console.WriteLine(daysOfWeek.tuesday);
 
+            Console.ReadKey();
         }
+        
+    }
+    enum daysOfWeek : byte
+    {
+        monday,
+        tuesday,
+        wednesday,
+        thearsday,
+        friday,
+        saturday,
+        sunday
+
+    }
+    enum semaphore
+    {
+        red = 100,
+        yellow = 200,
+        green = 300,
+        
     }
 }
