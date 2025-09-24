@@ -8,7 +8,7 @@ namespace PracForCsharp
     {
         static void Main(string[] args)
         {
-            const string MyName = "Aleksey";
+            /* const string MyName = "Aleksey";
             Console.WriteLine(MyName);
 
             Console.WriteLine("Привет, мир");
@@ -28,7 +28,33 @@ namespace PracForCsharp
             
             Console.WriteLine(daysOfWeek.tuesday);
 
-            Console.ReadKey();
+            double result = 5.0 / 3.0;
+            Console.WriteLine(result);
+
+            int counter = 10;
+            Console.WriteLine("Value : {0} Increment: {1}", counter, ++counter);
+            */
+            /*Console.Write("Enter your name: ");
+            string name = Console.ReadLine();
+            Console.Write("Enter your age: ");
+            byte age = checked((byte)int.Parse(Console.ReadLine()));
+            Console.WriteLine("Your name is {0} and age is {1} ", name, age);
+            Console.Write("What is ur favorite week?");
+            daysOfWeek week = (daysOfWeek)int.Parse(Console.ReadLine());
+            Console.WriteLine(week);
+            */
+            var name = Console.ReadLine();
+
+            var age = checked((byte)int.Parse(Console.ReadLine()));
+            Console.WriteLine("Your name is {0} and age is {1} ", name, age);
+
+            Console.Write("What is your favorite day of week? ");
+
+            var day = (daysOfWeek)int.Parse(Console.ReadLine());
+            Console.WriteLine("Your favorite day is {0}", day);
+            Console.WriteLine("Enter ur bithday");
+            var bithday = Console.ReadLine();
+            Console.WriteLine($"Your bithday is {bithday}!");
         }
         
     }
