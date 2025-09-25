@@ -69,7 +69,7 @@ namespace PracForCsharp
             }*/
 
             string color = Console.ReadLine();
-
+            /*
             if (color == "red")
             {
                 Console.BackgroundColor = ConsoleColor.Black;
@@ -87,6 +87,26 @@ namespace PracForCsharp
             }
             else
                 Console.WriteLine("Нет такого варианта!");
+            */
+            switch (color) 
+            {
+                case "red":
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("redredredred");
+                    break;
+                case "green":
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    break;
+                default: 
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    break;
+
+                    
+            
+            }
         }
         
     }
