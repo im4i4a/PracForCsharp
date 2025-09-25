@@ -43,7 +43,7 @@ namespace PracForCsharp
             daysOfWeek week = (daysOfWeek)int.Parse(Console.ReadLine());
             Console.WriteLine(week);
             */
-            var name = Console.ReadLine();
+            /*var name = Console.ReadLine();
 
             var age = checked((byte)int.Parse(Console.ReadLine()));
             Console.WriteLine("Your name is {0} and age is {1} ", name, age);
@@ -55,6 +55,38 @@ namespace PracForCsharp
             Console.WriteLine("Enter ur bithday");
             var bithday = Console.ReadLine();
             Console.WriteLine($"Your bithday is {bithday}!");
+            */
+
+           /* int a = 5;
+            int b = 2;
+            if (a > b)
+            {
+                Console.WriteLine("TRUE");
+            }
+            else
+            {
+                Console.WriteLine("FALSE");
+            }*/
+
+            string color = Console.ReadLine();
+
+            if (color == "red")
+            {
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Red;
+            }
+            else if (color == "green")
+            {
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Black;
+            }
+            else if (color == "yellow")
+            {
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Yellow;
+            }
+            else
+                Console.WriteLine("Нет такого варианта!");
         }
         
     }
