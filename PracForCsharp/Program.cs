@@ -1,6 +1,6 @@
 ﻿
 
-using System;
+using System.Data;
 
 namespace PracForCsharp
 {
@@ -57,18 +57,18 @@ namespace PracForCsharp
             Console.WriteLine($"Your bithday is {bithday}!");
             */
 
-           /* int a = 5;
-            int b = 2;
-            if (a > b)
-            {
-                Console.WriteLine("TRUE");
-            }
-            else
-            {
-                Console.WriteLine("FALSE");
-            }*/
+            /* int a = 5;
+             int b = 2;
+             if (a > b)
+             {
+                 Console.WriteLine("TRUE");
+             }
+             else
+             {
+                 Console.WriteLine("FALSE");
+             }*/
 
-            string color = Console.ReadLine();
+            //string color = Console.ReadLine();
             /*
             if (color == "red")
             {
@@ -88,7 +88,7 @@ namespace PracForCsharp
             else
                 Console.WriteLine("Нет такого варианта!");
             */
-            switch (color) 
+            /*switch (color) 
             {
                 case "red":
                     Console.BackgroundColor = ConsoleColor.Black;
@@ -103,29 +103,147 @@ namespace PracForCsharp
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
                     break;
+            */
+            /*for (int i = 0; i < 3; i++) 
+            {
 
+                switch (Console.ReadLine()) 
+                {
+                    case "red":
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("THIS IS RED!");
+                        break;
+
+                    case "green":
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("THIS IS GREEN!");
+                        break;
+                    case "yellow":
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("THIS IS YELLOW!");
+                        break;
+                    default:
+                        Console.BackgroundColor = ConsoleColor.Cyan;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("THIS IS CYAN!");
+                        break;
+                }
+            }*/
+            /*for (; ; )
+            {
+                switch (Console.ReadLine())
+                {
+                    case "red":
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("THIS IS RED!");
+                        break;
+
+                    case "green":
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("THIS IS GREEN!");
+                        break;
+
+                    case "yellow":
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("THIS IS YELLOW!");
+                        break;
+
+                    default:
+                        Console.BackgroundColor = ConsoleColor.Cyan;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("THIS IS CYAN!");
+                        break;
+
+                }
+            }*/
+            /*int counter = 0;
+            do
+            {
+                var text = Console.ReadLine();
+                if (text == "stop")
+                {
+                    break;
+                }
+                switch (text)
+                {
+                    case "red":
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("THIS IS RED!");
+                        break;
+
+                    case "green":
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("THIS IS GREEN!");
+                        break;
+
+                    case "yellow":
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("THIS IS YELLOW!");
+                        break;
+
+                    default:
+                        Console.BackgroundColor = ConsoleColor.Cyan;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("THIS IS CYAN!");
+                        break;
                     
-            
-            }
-        }
-        
-    }
-    enum daysOfWeek : byte
-    {
-        monday,
-        tuesday,
-        wednesday,
-        thearsday,
-        friday,
-        saturday,
-        sunday
+                }
+                counter++;
+            } while (true);*/
 
-    }
-    enum semaphore
-    {
-        red = 100,
-        yellow = 200,
-        green = 300,
-        
+            //string stringName = Console.ReadLine();
+            //Console.WriteLine("Вас зовут = " + stringName);
+
+            /*foreach (var chr in stringName){
+                Console.Write(chr + " ");
+                
+            }*/
+            /*for (int i = stringName.Length - 1; i >= 0; i--)
+            {
+                Console.Write(stringName[i]);
+            }
+            Console.WriteLine(" Последняя буква имени " + stringName[stringName.Length - 1]);
+            */
+         
+
+            int[,] array = { { 1, 2, 3 }, { 5, 6, 7 }, { 8, 9, 10 }, { 11, 12, 13 } };
+            for (int i = 0; i < array.GetUpperBound(1)+1; i++) 
+            { 
+                for (int j = 0; j < array.GetUpperBound(0) + 1; j++)
+                {
+                    Console.Write(array[j,i] + " ");
+                }
+                Console.WriteLine();
+            }
+
+        }
+        enum DaysOfWeek : byte
+        {
+            monday,
+            tuesday,
+            wednesday,
+            thearsday,
+            friday,
+            saturday,
+            sunday
+
+        }
+        enum Semaphore
+        {
+            red = 100,
+            yellow = 200,
+            green = 300,
+
+        }
     }
 }
+    
