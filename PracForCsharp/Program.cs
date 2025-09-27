@@ -214,7 +214,7 @@ namespace PracForCsharp
             Console.WriteLine(" Последняя буква имени " + stringName[stringName.Length - 1]);
             */
          
-
+            /*
             int[,] array = { { 1, 2, 3 }, { 5, 6, 7 }, { 8, 9, 10 }, { 11, 12, 13 } };
             for (int i = 0; i < array.GetUpperBound(1)+1; i++) 
             { 
@@ -223,8 +223,85 @@ namespace PracForCsharp
                     Console.Write(array[j,i] + " ");
                 }
                 Console.WriteLine();
+            }*/
+
+            // Сортировка массива
+            int bubble = 0;
+            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            for (int i = 0; i < arr.Length; i ++)
+            {
+                for(int j = 0;j < arr.Length - 1; j++)
+                {
+                    if (arr[i] < arr[j])
+                    {
+                        bubble = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = bubble;
+                    }
+
+                }
+            }
+            foreach (var item in arr)
+            {
+                Console.Write(item + " ");
             }
 
+            int sum = 0;
+            foreach (var number in arr)
+            {
+                sum += number;
+            }
+            Console.WriteLine(sum);
+
+            string[][] arrString = new string [3][];
+
+            arrString[0] = new string[] { "картошка","car", "magazin" };
+            arrString[1] = new string[] { "Apple" };
+            arrString[2] = new string[] { "like","could", "be","dream" };
+
+            foreach (var item in arrString)
+            {
+                foreach (var word in item)
+                {
+                    Console.Write(word + " ");
+                }
+                Console.WriteLine();
+            }
+            //////////////////////////////////////////
+            int[] arr2 = new int[] { 2, 5 ,-5, -10, -3, 6, 63, -41, 15, 9, -9 , 3};
+            int counter = 0;
+            for (int i = 0; i < arr2.Length; i++)
+            {
+                if (arr2[i] > 0)
+                {
+                    counter++;
+                }
+            }
+            Console.WriteLine(counter);
+            
+            
+            /////////////////////////////////////
+            int temp = 0;
+            int[,] arr3 = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+
+            for (int i = 0; i < arr3.GetUpperBound(0) + 1; i++)
+            {
+                for (int j = 0; j < arr3.GetUpperBound(1) + 1; j++)
+                {
+                    if (arr3[i,j] > 0)
+                        temp++;
+                }
+            }
+            Console.WriteLine("ANSWER - " + temp);
+
+            //////////////////////////////////////////
+            counter = 0;
+            foreach (var item in arr3)
+            {
+                if (item > 0)
+                    counter++;
+            }
+            Console.WriteLine(counter);
         }
         enum DaysOfWeek : byte
         {
