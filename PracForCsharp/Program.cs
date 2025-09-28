@@ -1,6 +1,7 @@
 ﻿
 
 using System.Data;
+using System.Xml.Linq;
 
 namespace PracForCsharp
 {
@@ -226,7 +227,7 @@ namespace PracForCsharp
             }*/
 
             // Сортировка массива
-            int bubble = 0;
+            /*int bubble = 0;
             var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
             for (int i = 0; i < arr.Length; i ++)
             {
@@ -301,7 +302,59 @@ namespace PracForCsharp
                 if (item > 0)
                     counter++;
             }
-            Console.WriteLine(counter);
+            Console.WriteLine(counter);*/
+
+            /*int[,] arr5 = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+            int temp1;
+            for (int i = 0; i <= arr5.GetUpperBound(0); i++)
+            {
+                for (int j = 0; j <= arr5.GetUpperBound(1); j++)
+                {
+                    for (int k = j+1; k <= arr5.GetUpperBound(1); k++)
+                    {
+                        if (arr5[i, j] > arr5[i,k])
+                        {
+                            temp1 = arr5[i, j];
+                            arr5[i, j] = arr5[i, k];
+                            arr5[i, k] = temp1;
+
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0;i < arr5.GetUpperBound(0)+1; i++)
+            {
+                for(int j = 0;j < arr5.GetUpperBound(1)+1; j++)
+                {
+                    Console.Write(arr5[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+
+
+            var (name, age) = ("Евгения", 27);
+
+            Console.WriteLine("Ваше имя: {0}", name);
+            Console.WriteLine("Ваш возраст: {0}", age);
+
+
+            name = Console.ReadLine();
+            age = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Ваше имя: {0}", name);
+            Console.WriteLine("Ваш возраст: {0}", age);
+            */
+            (string Name, string Type, double Age, int NameCount) Pet;
+            Pet.Name = Console.ReadLine();
+            Pet.Type = Console.ReadLine();
+            Pet.Age = Convert.ToDouble(Console.ReadLine());
+            Pet.NameCount = 0;
+            foreach (var ch in Pet.Name)
+            {
+                Pet.NameCount++;
+            }
+            Console.WriteLine("Кол-во букв в имени {0}",Pet.NameCount);
         }
         enum DaysOfWeek : byte
         {
