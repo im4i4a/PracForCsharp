@@ -409,6 +409,17 @@ namespace PracForCsharp
                 }
 
             }
+
+            (string Name, string[] dishes) User1;
+
+            User1.Name = Console.ReadLine();
+            Console.WriteLine("Введите 5 любимых блюд: ");
+            User1.dishes = new string[5];
+            for (int i = 0; i < User1.dishes.Length; i++)
+            {
+                User1.dishes[i] = Console.ReadLine();
+            }
+
         }
         enum DaysOfWeek : byte
         {
