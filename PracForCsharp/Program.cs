@@ -214,7 +214,7 @@ namespace PracForCsharp
             }
             Console.WriteLine(" Последняя буква имени " + stringName[stringName.Length - 1]);
             */
-         
+
             /*
             int[,] array = { { 1, 2, 3 }, { 5, 6, 7 }, { 8, 9, 10 }, { 11, 12, 13 } };
             for (int i = 0; i < array.GetUpperBound(1)+1; i++) 
@@ -345,16 +345,70 @@ namespace PracForCsharp
             Console.WriteLine("Ваше имя: {0}", name);
             Console.WriteLine("Ваш возраст: {0}", age);
             */
-            (string Name, string Type, double Age, int NameCount) Pet;
-            Pet.Name = Console.ReadLine();
-            Pet.Type = Console.ReadLine();
-            Pet.Age = Convert.ToDouble(Console.ReadLine());
-            Pet.NameCount = 0;
-            foreach (var ch in Pet.Name)
+            /* (string Name, string Type, double Age, int NameCount) Pet;
+             Pet.Name = Console.ReadLine();
+             Pet.Type = Console.ReadLine();
+             Pet.Age = Convert.ToDouble(Console.ReadLine());
+             Pet.NameCount = 0;
+             foreach (var ch in Pet.Name)
+             {
+                 Pet.NameCount++;
+             }
+             Console.WriteLine("Кол-во букв в имени {0}",Pet.NameCount);
+             */
+                (string Name, string LastName, string Login, int LoginLength, bool HasPet, string[] favcolors, double Age) User;
+
+            for (int countUsers = 0; countUsers < 3; countUsers++)
             {
-                Pet.NameCount++;
+                Console.WriteLine("Введите имя");
+
+                User.Name = Console.ReadLine();
+
+                Console.WriteLine("Введите фамилию");
+
+                User.LastName = Console.ReadLine();
+
+                Console.WriteLine("Введите логин");
+
+                User.Login = Console.ReadLine();
+
+                User.LoginLength = User.Login.Length;
+                Console.WriteLine($"Длина логина составляет {User.LoginLength}");
+                Console.WriteLine("Есть ли у вас животные? Да или Нет");
+                string answerPet = Console.ReadLine();
+                switch (answerPet)
+                {
+                    case "Да" or "да":
+                        User.HasPet = true;
+                        Console.WriteLine("У вас есть домашний питомец");
+                        break;
+                    case "Нет" or "нет":
+                        User.HasPet = false;
+                        Console.WriteLine("У вас нет домашнего питомца");
+                        break;
+                    default:
+                        Console.WriteLine("Не корректный ответ");
+                        break;
+
+                }
+
+                Console.WriteLine("Введите возраст пользователя");
+
+
+                User.Age = double.Parse(Console.ReadLine());
+
+
+                User.favcolors = new string[3];
+
+                Console.WriteLine("Введите три любимых цвета пользователя");
+
+                for (int i = 0; i < User.favcolors.Length; i++)
+                {
+                    User.favcolors[i] = Console.ReadLine();
+
+                }
+
             }
-            Console.WriteLine("Кол-во букв в имени {0}",Pet.NameCount);
         }
         enum DaysOfWeek : byte
         {
