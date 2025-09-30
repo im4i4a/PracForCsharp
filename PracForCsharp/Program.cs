@@ -1,14 +1,121 @@
 ﻿
 
 using System.Data;
+using System.Drawing;
 using System.Xml.Linq;
 
 namespace PracForCsharp
 {
     internal class Program
     {
+        static string ShowColor(string username, int age)
+        {
+            Console.WriteLine($"{username} вам {age} лет!\nНапишите свой любимый цвет на английском с маленькой буквы, ");
+            string color = Console.ReadLine();  
+            switch (color)
+            {
+                case "red":
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    Console.WriteLine("redredredred");
+                    break;
+                case "green":
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    Console.WriteLine("redredredred");
+                    break;
+                default:
+                    Console.BackgroundColor = ConsoleColor.Cyan;
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    Console.WriteLine("redredredred");
+                    break;
+            }
+            return color;
+        }
+
+        static int[] GetArrayFromConsole(int num = 5)
+        {
+            var array = new int[num];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine("Введите элемент массива номер {0}", i + 1);
+                array[i] = int.Parse(Console.ReadLine());
+            }
+            
+
+            return array;
+        }
+        static int[] SortArray(params int[] sortedarray) 
+        {
+            int temp;
+            
+            for (int i = 0; i < sortedarray.Length; i++)
+            {
+                for (int j = i; j < sortedarray.Length; j++)
+                {
+                    if (sortedarray[i] > sortedarray[j])
+                    {
+                        temp = sortedarray[i];
+                        sortedarray[i] = sortedarray[j];
+                        sortedarray[j] = temp;
+                    }
+                }
+            }
+            
+            
+            
+            return sortedarray;
+        }
+
+        static void ShowArray(int[] array, bool isSort = false)
+        {
+            var temp = array;
+
+            if (isSort)
+            {
+                temp = SortArray(temp);
+            }
+
+
+            foreach (int i in temp)
+            {
+                Console.Write(i + " ");
+            }
+
+           
+        }
         static void Main(string[] args)
         {
+
+            var array = GetArrayFromConsole(10);
+            ShowArray(array, true);
+
+
+            (string name, int age) anketa;
+
+            Console.Write("Введите имя: ");
+            anketa.name = Console.ReadLine();
+            Console.Write("Введите возраст с цифрами: ");
+            anketa.age = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Ваше имя: {0}", anketa.name);
+            Console.WriteLine("Ваш возраст: {0}", anketa.age);
+
+            
+
+            
+            string[] favorcolor = new string[3];
+            for (int i = 0; i < favorcolor.Length; i++)
+            {
+                favorcolor[i] = ShowColor(anketa.name, anketa.age);
+            }
+
+            foreach (string item in favorcolor)
+            {
+                Console.Write(item + " ");
+            }
+            
             /* const string MyName = "Aleksey";
             Console.WriteLine(MyName);
 
@@ -356,7 +463,7 @@ namespace PracForCsharp
              }
              Console.WriteLine("Кол-во букв в имени {0}",Pet.NameCount);
              */
-                (string Name, string LastName, string Login, int LoginLength, bool HasPet, string[] favcolors, double Age) User;
+            /*(string Name, string LastName, string Login, int LoginLength, bool HasPet, string[] favcolors, double Age) User;
 
             for (int countUsers = 0; countUsers < 3; countUsers++)
             {
@@ -408,9 +515,9 @@ namespace PracForCsharp
 
                 }
 
-            }
+            }*/
 
-            (string Name, string[] dishes) User1;
+            /*(string Name, string[] dishes) User1;
 
             User1.Name = Console.ReadLine();
             Console.WriteLine("Введите 5 любимых блюд: ");
@@ -418,8 +525,9 @@ namespace PracForCsharp
             for (int i = 0; i < User1.dishes.Length; i++)
             {
                 User1.dishes[i] = Console.ReadLine();
-            }
-
+            }*/
+            //string color = Console.ReadLine();
+            //ShowColor();
         }
         enum DaysOfWeek : byte
         {
